@@ -21,7 +21,6 @@ if (isset($_POST['login'])){
             if($count == 1) {
                 $userid = $row['userid'];
                 $_SESSION['user'] = $userid;
-                $username = $_SESSION['user'];
                 header("location:profile.php");
             }
             else {

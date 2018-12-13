@@ -19,10 +19,17 @@ if ($_SESSION['user'] == 0 || $_SESSION['user'] == 1){
 
 
         <header>
-            
-            <a href="../viewproducts.php"><button>View Products</button></a>
-            
-            
+            <a href="../viewproducts.php"><button>View all products</button></a>
+            <a href="../users/profile.php"><button>profile</button></a>
+            <?php
+
+            if ($_SESSION['user'] == 0 || $_SESSION['user'] == 1){
+                echo "<a href='../users/login.php'><button class='sign'>login</button></a>";
+            }
+            else {
+                echo "<a href='../users/logout.php'><button class='sign'>logout</button></a>";
+            }
+            ?>
         </header>
 
 

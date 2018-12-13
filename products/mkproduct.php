@@ -12,14 +12,14 @@ $price = $_POST['price'];
 $mkproduct = "INSERT INTO `product` (id, seller, name, info, price, time) VALUES (NULL, '$name', '$title', '$text', '$price', CURRENT_TIMESTAMP)";
 
 if (isset($_POST['submit'])){
-	if (!empty($_POST['title']) && $_POST['info']){
+	if (!empty($_POST['title'])){
 	mysqli_query($conn, $mkproduct);
 	
     header("location:../viewproducts.php");
      
 	}
     else{
-        echo "error";
+        echo "fill out all the forms fields please";
 
         
         echo "<br>";
