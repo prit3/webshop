@@ -113,7 +113,8 @@ session_start();
                         <div class="card text-center" style="width: 18rem;">
                       <img class="card-img-top" src=".../100px180/" alt="Card image cap">
                       <div class="card-body">
-                        <h5 class="card-title"><?php echo $row['name'] ?></h5>
+                          <h5 class="card-title"><a href="<?php echo "./products/product.php?id=$row[id]" ?>" class="card-link"><?php echo $row['name'] ?></a></h5>
+                          
                         <p class="card-text"><small class="text-muted"><?php echo "&euro;".$row['price'] ?><br><?php echo $row['time']; ?> </small></p>
                       </div>
                     </div>
